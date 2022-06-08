@@ -1,20 +1,20 @@
 class Solution {
-    public boolean isPalindrome(int num) {
-        int result = 0;
-        int originalNum = num;
+    public boolean isPalindrome(int x) {
+        int reversed = 0;
         int remainder;
-        if(num < 0){
-        return false;
+        int original = x;
+        if(x < 0){
+            return false;
         }
-        if(num >= 0 && num <10){
+        if(x >= 0 && x < 10){
             return true;
         }
-        while(num >0){
-            remainder = num % 10;
-            result = result * 10 + remainder;
-            num = num / 10;
+        while( x > 0){
+            remainder = x%10;
+            reversed = reversed*10 + remainder;
+            x= x/10;
         }
-            return originalNum == result;
+        return original == reversed;
       
     }
 }
